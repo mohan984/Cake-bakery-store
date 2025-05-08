@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Bakery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-bread-slice" style="font-size: 2rem; color: var(--primary-color);"></i>
+                <h1>Cake  Bakery</h1>
+            </div>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li class="nav-home active"><a href="#" onclick="loadPage('home')">Home</a></li>
+                    <li class="nav-about"><a href="#" onclick="loadPage('about')">About</a></li>
+                    <li class="nav-services"><a href="#" onclick="loadPage('services')">Services</a></li>
+                    <li class="nav-contact"><a href="#" onclick="loadPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content Container -->
+    <div id="page-container">
+        <!-- Home Page Content -->
+        <div id="home-content" class="page-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Freshly Baked Goodness</h2>
+                    <p>Handcrafted artisanal breads, pastries, and cakes made with locally sourced ingredients and a passion for traditional baking.</p>
+                    <a href="#" onclick="loadPage('contact')" class="btn">Order Now</a>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Our Specialties</h2>
+                        <p>Discover our range of delicious, freshly baked products made with love and the finest ingredients.</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-img">
+                                <img src="/images/baking.jpg" alt="Artisanal Bread">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Artisanal Bread</h3>
+                                <p>Our signature sourdough, whole grain, and specialty breads are crafted using traditional methods and slow fermentation for exceptional flavor and texture.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-img">
+                                <img src="images/gourmet.jpg" alt="Gourmet Pastries">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Gourmet Pastries</h3>
+                                <p>Indulge in our flaky croissants, delicate Danish pastries, and mouthwatering morning buns made with European-style butter and organic flour.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-img">
+                                <img src="images/customcakes.jpg" alt="Custom Cakes">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Custom Cakes</h3>
+                                <p>Celebrate special moments with our beautiful custom cakes, designed to your specifications and made with premium ingredients for unforgettable flavor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>What Our Customers Say</h2>
+                        <p>Don't just take our word for it - here's what our satisfied customers have to say about us.</p>
+                    </div>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The sourdough bread from karthikeyan bakery is absolutely the best I've ever tasted. I can't go back to store-bought bread now!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Local Resident</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"They created the most beautiful and delicious cake for my daughter's wedding. Everyone was impressed by both the look and taste!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Mike Davis">
+                                <div class="author-info">
+                                    <h4>Mike Davis</h4>
+                                    <p>Wedding Client</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The pastries here are exceptional. I've traveled throughout Europe and these are on par with the best bakeries I've visited there."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Elena Rodriguez">
+                                <div class="author-info">
+                                    <h4>Elena Rodriguez</h4>
+                                    <p>Food Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Ready to Place an Order?</h2>
+                    <p>Contact us today to discuss your requirements or place an order for pickup or local delivery.</p>
+                    <a href="#" onclick="loadPage('contact')" class="btn secondary">Contact Us</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page Content -->
+        <div id="about-content" class="page-content" style="display: none;">
+            <section class="about-section">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h2>Our Story</h2>
+                            <p>Cake bakery was founded in 2010 by master baker Emily Chen, who was inspired by her grandmother's recipes and a passion for traditional baking methods.</p>
+                            <p>What began as a small operation at the local farmers' market has grown into a beloved community bakery, known for exceptional quality and a commitment to using locally sourced, organic ingredients.</p>
+                            <p>Today, our team of skilled bakers continues Emily's tradition of creating delicious, handcrafted baked goods that bring joy to our community. We believe in the power of good food to bring people together and create lasting memories.</p>
+                            <p>Our mission is simple: to bake with integrity, serve with warmth, and create products that nourish both body and soul.</p>
+                        </div>
+                        <div class="about-img">
+                            <img src="images/bakeryint.jpg" alt="Bakery Interior">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Meet Our Team</h2>
+                        <p>The passionate and skilled people behind our delicious creations.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="/api/placeholder/400/400" alt="Marcus Williams">
+                        </div>
+                        <div class="team-info">
+                            <h3>Marcus Williams</h3>
+                            <p>Head Pastry Chef</p>
+                            <p>With a background in fine dining, Marcus creates our stunning pastries and custom cakes.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="/api/placeholder/400/400" alt="Lisa Johnson">
+                        </div>
+                        <div class="team-info">
+                            <h3>Lisa Johnson</h3>
+                            <p>Bread Specialist</p>
+                            <p>Lisa's passion for sourdough and artisanal breads produces our signature loaves every day.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="/api/placeholder/400/400" alt="David Rodriguez">
+                        </div>
+                        <div class="team-info">
+                            <h3>David Rodriguez</h3>
+                            <p>Operations Manager</p>
+                            <p>David ensures that everything runs smoothly so our team can focus on creating amazing baked goods.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="/api/placeholder/400/400" alt="Emily Chen">
+                            </div>
+                            <div class="team-info">
+                                <h3>Emily Chen</h3>
+                                <p>Founder & Master Baker</p>
+                                <p>Trained in Paris and San Francisco, Emily brings over 20 years of baking expertise to every recipe.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page Content -->
+        <div id="services-content" class="page-content" style="display: none;">
+            <section class="services-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Our Services</h2>
+                        <p>Discover our wide range of baking services designed to meet all your needs, from daily bread to special occasion cakes.</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/deli.jpg" alt="Daily Fresh Bakes">
+                            </div>
+                            <div class="service-content">
+                                <h3>Daily Fresh Bakes</h3>
+                                <p>Our bakery offers a wide selection of freshly baked goods every day, from artisanal breads to sweet treats.</p>
+                                <ul>
+                                    <li>Artisanal sourdough and specialty breads</li>
+                                    <li>Flaky croissants and Danish pastries</li>
+                                    <li>Muffins, scones, and breakfast pastries</li>
+                                    <li>Cookies, brownies, and sweet treats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/custom.jpg" alt="Custom Cakes">
+                            </div>
+                            <div class="service-content">
+                                <h3>Custom Cakes & Desserts</h3>
+                                <p>Let us create the perfect cake or dessert for your special occasion, tailored to your preferences.</p>
+                                <ul>
+                                    <li>Wedding cakes and celebration cakes</li>
+                                    <li>Birthday cakes for all ages</li>
+                                    <li>Dessert tables and petit fours</li>
+                                    <li>Seasonal and holiday specialties</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/catering.jpg" alt="Catering Services">
+                            </div>
+                            <div class="service-content">
+                                <h3>Catering Services</h3>
+                                <p>Make your event memorable with our catering options, from corporate meetings to family celebrations.</p>
+                                <ul>
+                                    <li>Morning tea and breakfast catering</li>
+                                    <li>Corporate event packages</li>
+                                    <li>Private party and celebration catering</li>
+                                    <li>Custom menus for special dietary needs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/baking.jpg" alt="Baking Classes">
+                            </div>
+                            <div class="service-content">
+                                <h3>Baking Classes</h3>
+                                <p>Learn the art of baking with our hands-on classes for all skill levels, taught by our experienced team.</p>
+                                <ul>
+                                    <li>Bread baking fundamentals</li>
+                                    <li>Pastry and viennoiserie techniques</li>
+                                    <li>Cake decorating masterclasses</li>
+                                    <li>Children's baking workshops</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/bakedeliver.jpg" alt="Subscription Boxes">
+                            </div>
+                            <div class="service-content">
+                                <h3>Subscription Boxes</h3>
+                                <p>Enjoy regular deliveries of our freshly baked goods with our convenient subscription service.</p>
+                                <ul>
+                                    <li>Weekly bread subscriptions</li>
+                                    <li>Monthly pastry boxes</li>
+                                    <li>Seasonal specialty packages</li>
+                                    <li>Customizable options available</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-img">
+                                <img src="images/gluten.jpg" alt="Special Dietary Options">
+                            </div>
+                            <div class="service-content">
+                                <h3>Specialty Dietary Options</h3>
+                                <p>We cater to various dietary needs with our specially crafted recipes that don't compromise on taste.</p>
+                                <ul>
+                                    <li>Gluten-free breads and pastries</li>
+                                    <li>Vegan and dairy-free options</li>
+                                    <li>Low-sugar and keto-friendly treats</li>
+                                    <li>Organic and all-natural ingredients</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <div class="container">
+                    <h2>Need Something Special?</h2>
+                    <p>We're happy to discuss custom orders and special requests. Contact us to learn more about how we can meet your specific needs.</p>
+                    <a href="#" onclick="loadPage('contact')" class="btn secondary">Get in Touch</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page Content -->
+        <div id="contact-content" class="page-content" style="display: none;">
+            <section class="contact-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Contact Us</h2>
+                        <p>Have questions or ready to place an order? Get in touch with us today!</p>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Our Information</h3>
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>gandhi nagar<br>vijayawada-520001</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+91 7989214569</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@bachan.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Hours</h4>
+                                    <p>Monday - Friday: 7:00 AM - 6:00 PM<br>
+                                    Saturday: 8:00 AM - 5:00 PM<br>
+                                    Sunday: 8:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h3>Send Us a Message</h3>
+                            <div id="form-message-success" class="alert alert-success" style="display: none;">
+                                Your message was sent successfully. Thank you!
+                            </div>
+                            <div id="form-message-error" class="alert alert-error" style="display: none;">
+                                Sorry, an error occurred. Please try again later.
+                            </div>
+                            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="1b8530ce-b4db-46cd-9b37-6a60fd7414b9">
+                                <input type="hidden" name="subject" value="New Contact Form Submission - karthikeyan bakery">
+                                <input type="hidden" name="redirect" value="false">
+                                
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" class="form-control" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="order-type">Order Type (if applicable)</label>
+                                    <select id="order-type" name="order-type" class="form-control">
+                                        <option value="">-- Select an option --</option>
+                                        <option value="bread">Bread Order</option>
+                                        <option value="pastries">Pastries Order</option>
+                                        <option value="cake">Custom Cake</option>
+                                        <option value="catering">Catering Inquiry</option>
+                                        <option value="classes">Baking Classes</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="map-container" style="width: 100%; height: 450px; margin-top: 20px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30601.64366053!2d80.58885517431638!3d16.515722000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35effc297f45ed%3A0x4a35ee99f7f66c8f!2sAlankar%20Sweets%20%26%20Bakers!5e0!3m2!1sen!2sin!4v1746710346191!5m2!1sen!2sin" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Cake Bakery</h3>
+                    <p>Handcrafted artisanal breads, pastries, and cakes made with locally sourced ingredients and a passion for traditional baking.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="loadPage('home')">Home</a></li>
+                        <li><a href="#" onclick="loadPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="loadPage('services')">Services</a></li>
+                        <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> gandhi nagar,vijayawada,Andhra Pradesh</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 7989214569</p>
+                    <p><i class="fas fa-envelope"></i> info@bachan.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 7AM-6PM, Sat: 8AM-5PM, Sun: 8AM-2PM</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new products, special offers, and baking tips.</p>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cake Bakery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
